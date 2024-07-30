@@ -1,0 +1,186 @@
+.account {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .body {
+        display: flex;
+        flex-direction: column;
+        gap: 10%;
+
+        .top {
+            width: 100%;
+            height: 470px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .head {
+                span {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
+            .info {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                gap: 10%;
+                
+                .box {
+                    width: 30%;
+                    height: 440px;
+                    display: flex;
+                    flex-direction: column;
+          
+                    .account {
+                      width: 100%;
+                      height: 78%;
+                      background-color: black;
+                      padding: 40px;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 20px;
+          
+                      p {
+                        font-size: 16px;
+                        color: white;
+                      }
+                      span {
+                        font-size: 14px;
+                        color: white;
+                      }
+                      h1 {
+                        font-size: 50px;
+                        color: white;
+                      }
+                      .line {
+                        width: 100%;
+                        height: 1px;
+                        border: 1px solid rgba(255, 255, 255, 0.653);
+                      }
+                      .bank {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        .ifsc {
+                          display: flex;
+                          flex-direction: column;
+                          gap: 5px;
+                          color: white;
+                        }
+                        .owner {
+                          display: flex;
+                          flex-direction: column;
+                          gap: 5px;
+                          color: white;
+                        }
+                      }
+                    }
+                    .share {
+                      width: 100%;
+                      height: 12%;
+                      background-color: rgb(190, 157, 190);
+                      display: flex;
+                      flex-direction: row;
+                      gap: 10px;
+                      align-items: center;
+                      justify-content: center;
+          
+                      p {
+                        color: #000;
+                      }
+                    }
+                  }
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 20%;
+
+            .head_card {
+                span {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
+            .info_card {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+
+                .card {
+                    background: linear-gradient(#ff796f, #bd261b);
+                    padding: var(--card-padding);
+                    border-radius: var(--card-border-radius);
+                    color: white;
+                    height: 16rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    box-shadow: 0 2rem 3rem var(--color-danger-light);
+                    min-width: 22rem;
+                    transition: all 0.3s ease;
+                  
+                    &:hover {
+                      box-shadow: none;
+                    }
+                  
+                    .top {
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                  
+                      .left {
+                        display: flex;
+                        gap: 0.5rem;
+                  
+                        h2 {
+                          font-weight: 200;
+                          font-size: 1.4rem;
+                        }
+                  
+                        img {
+                          width: 2.3rem;
+                          height: 2.3rem;
+                          border: 1px solid white;
+                          border-radius: var(--border-radius-2);
+                          padding: 0.4rem;
+                        }
+                      }
+                  
+                      img.right {
+                        width: 3.5rem;
+                      }
+                    }
+                  
+                    .middle {
+                      display: flex;
+                      justify-content: space-between;
+                  
+                      .chip {
+                        width: 3.5rem;
+                      }
+                    }
+                  
+                    .bottom_card {
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: flex-end;
+                  
+                      .right {
+                        display: flex;
+                        gap: 2rem;
+                      }
+                    }
+                  }
+            }
+        }
+    }
+}

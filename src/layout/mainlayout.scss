@@ -1,0 +1,20 @@
+.main {
+    display: flex;
+    flex-direction: column;
+
+    .main_content {
+        display: flex;
+        flex-direction: row;
+
+        .sidebar {
+            width: 15%;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+        .outlet {
+            width: 100%;
+            padding-top: 20px;
+            padding: 20px;
+        }
+    }
+}
