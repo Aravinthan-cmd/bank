@@ -1,6 +1,6 @@
 import React from 'react';
 import './navbar.scss';
-import logo from '../../assets/img/logo.png';
+import logo from '../../assets/img/bank_logo.png';
 import profilePhoto from '../../assets/img/profile-1.png';
 import ThemeToggle from '../ThemeToggle';
 
