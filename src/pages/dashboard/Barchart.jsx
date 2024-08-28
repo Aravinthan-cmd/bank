@@ -40,7 +40,7 @@ class BarChart extends React.Component {
           theme: 'dark',
           fixed: {
             enabled: true,
-            position: 'topRight', // keeps tooltip in a fixed position
+            position: 'topRight',
             offsetY: -30,
             offsetX: 60
           }

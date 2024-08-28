@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import "./transfer.scss";
 import Share from "../../components/share/Share";
 import person2 from "../../assets/img/person/person2.jpg";
@@ -7,6 +7,28 @@ import person4 from "../../assets/img/person/person4.jpg";
 import person5 from "../../assets/img/person/person5.jpg";
 
 const Transfer = () => {
+  const [account, setAccount] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      var url;
+      try {
+        url = "http://localhost:8080/account/1";
+        const response = await fetch(url);
+        const datafetchVal = await response.json();
+        setAccount(datafetchVal);
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+    const interval = setInterval(async() => {
+      await fetchData();
+    }, 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <div className="transfer">
       <h1>Transfer</h1>
@@ -25,7 +47,7 @@ const Transfer = () => {
                 <div className="account">
                     <p>Checking Account</p>
                     <span>Balance</span>
-                    <h1>₹ 10,000.00</h1>
+                    <h1>₹ {account.account_balance}</h1>
                     <div className="line"></div>
                     <div className="bank">
                         <div className="ifsc">
@@ -34,7 +56,7 @@ const Transfer = () => {
                         </div>
                         <div className="owner">
                             <h3>Account Owner</h3>
-                            <h2>Aravinthan M</h2>
+                            <h2>{account.account_holder_name}</h2>
                         </div>
                     </div>
                 </div>
@@ -86,7 +108,7 @@ const Transfer = () => {
       </div>
       <form>
         <div className="form-group">
-          <label htmlFor="iban">IBAN *</label>
+          <label htmlFor="iban">IFSC *</label>
           <input type="text" id="iban" name="iban" required />
         </div>
         <div className="form-group">

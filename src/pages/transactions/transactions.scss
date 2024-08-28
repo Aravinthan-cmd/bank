@@ -31,12 +31,13 @@
           }
         }
         .content {
+          width: 100%;
             display: flex;
             flex-direction: row;
-            gap: 50px;
+            gap: 40px;
 
             .account {
-              width: 100%;
+              width: 350px;
               height: 390px;
               background-color: black;
               padding: 40px;
@@ -215,6 +216,8 @@
             }
           }
           .content {
+            height: 700px;
+            overflow-x: auto;
             display: flex;
             flex-direction: column;
             gap: 40px;

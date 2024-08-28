@@ -1,7 +1,7 @@
 import React from "react";
 import '../card/card.scss';
 
-const Card = ({categories}) => {
+const Card = ({categories, description, price}) => {
   return (
     <div className="card">
       <div className="info-card">
@@ -9,12 +9,12 @@ const Card = ({categories}) => {
           {categories}
         </div>
         <div className="title_card">
-          <p>Central Burger</p>
+          <p>{description}</p>
           <span>Cafe and Restaturent</span>
         </div>
       </div>
       <div className="price">
-        <h2>₹ 189.00</h2>
+        <h2>₹ {price}</h2>
       </div>
     </div>
   );
